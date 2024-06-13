@@ -10,5 +10,5 @@ sudo apt install apt-transport-https -y
 sudo apt update
 sudo apt install code -y
 sudo apt install python3-pip -y
-sudo pip install pygame --break-system-packages
+pip install pygame --break-system-packages
 echo "Installation complete!"
