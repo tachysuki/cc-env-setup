@@ -1,7 +1,5 @@
 echo "Environment setup shell script for Computer Club's Debian Ver.1.0"
-su
-echo 'pc-club ALL=ALL(ALL:ALL) ALL' | sudo EDITOR='tee -a' visudo
-exit
+su -c "echo 'pc-club ALL=(ALL:ALL) ALL' | sudo EDITOR='tee -a' visudo"
 sudo sed -i "/cdrom/d" /etc/apt/sources.list
 sudo apt update
 sudo apt upgrade -y
