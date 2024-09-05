@@ -14,7 +14,7 @@ sudo apt install code -y
 sudo apt install python3-pip -y
 pip install pygame --break-system-packages
 sudo crontab -l > tempfile
-echo "@reboot apt update && apt upgrade -y"
+echo "@reboot $(which apt) update && $(which apt) upgrade -y"
 sudo crontab tempfile
 rm tempfile
 echo "Installation complete!"
